@@ -15,12 +15,18 @@
   --black: #181719;
 }
 
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--black);
+  position: relative;
+}
+
 .wrapper {
   background-color: var(--black);
   padding: 32px 123px;
   height: 100vh;
   width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 42px;
@@ -41,6 +47,16 @@
   min-width: 102px;
   min-height: 32px;
   font-family: "Lora";
+}
+
+span.material-icons {
+  display: none;
+}
+.header-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: var(--black);
+  transition: all 0.8s;
 }
 
 .header-ul {
@@ -66,6 +82,7 @@
   cursor: pointer;
   border-bottom: 2px solid white;
   padding-bottom: 4px;
+  transition: all 0.2s;
 }
 
 /*MAIN SECTION*/
@@ -121,4 +138,164 @@
 .readmore-p:hover {
   cursor: pointer;
   border-bottom: 2px solid white;
+}
+
+/*PROFILE CARD*/
+
+.card {
+  padding: 16px;
+  background-color: var(--black);
+  min-width: 410px;
+  min-height: 189px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+
+  top: 570px;
+  left: 1300px;
+}
+
+.card-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-photo {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50px;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.profile-title {
+  color: white;
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.profile-p {
+  font-family: "Montserrat";
+  color: var(--gray3);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.card-title {
+  color: white;
+  font-family: "Lora";
+  max-width: 287px;
+}
+
+.footer-text {
+  margin-top: 42px;
+  color: #bdbdbd;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  line-height: 17.07px;
+  text-align: center;
+}
+
+a {
+  color: #ff6d5b;
+  text-decoration: none;
+}
+
+/*RESPONSIVE DESIGN*/
+
+@media screen and (max-width: 375px) {
+  html {
+    height: 100vh;
+  }
+
+  body {
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    max-width: 351px;
+    padding: 0px 0px;
+    margin: 0 auto;
+  }
+
+  .header {
+    width: 100vw;
+    max-width: 351px;
+    height: 50px;
+    position: fixed;
+    padding: 0px 8px;
+    background-color: var(--black);
+  }
+
+  .header-btn {
+    background-color: var(--black);
+  }
+  .material-icons {
+    color: white;
+    text-align: center;
+  }
+
+  .header-nav {
+    background-color: var(--black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+  }
+
+  .header-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 32px;
+  }
+
+  .main-block {
+    flex-direction: column;
+    align-items: start;
+    margin-top: 80px;
+    padding: 0px 8px;
+  }
+
+  .main-title {
+    max-width: 274px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .main-p {
+    max-width: 250px;
+    font-weight: 400px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .main-img {
+    max-width: 351px;
+  }
+
+  .card {
+    min-width: 200px;
+    min-height: 138px;
+    top: 530px;
+    left: 35px;
+    gap: 6px;
+  }
+
+  .card-profile {
+    max-width: 200px;
+  }
 }
